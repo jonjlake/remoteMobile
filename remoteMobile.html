@@ -6,8 +6,8 @@
     type="text/javascript" charset="utf-8">
 </script>
 <script>
-var accessToken="";
-var deviceID="";
+//var accessToken="";
+//var deviceID="";
 var deviceFunction="morse";
 var commandFunction="command";
 
@@ -126,7 +126,53 @@ function sendCommand(command)
 <input type="button" onClick="sendCommand('YAMCblSat')" value="CBL/SAT"/>
 <input type="button" onClick="sendCommand('YAMOnScreen')" value="On Screen"/>
 
-<h3>Custom Input</h3>
+<h3>Samsung TV</h3>
+<input type="button" onClick="sendCommand('SAMOnOff')" value="Power"/>
+<input type="button" onClick="sendCommand('SAMSource')" value="Source"/>
+<input type="button" onClick="sendCommand('SAMMute')" value="Mute"/>
+<input type="button" onClick="sendCommand('SAM1')" value="1"/>
+<input type="button" onClick="sendCommand('SAM2')" value="2"/>
+<input type="button" onClick="sendCommand('SAM3')" value="3"/>
+<input type="button" onClick="sendCommand('SAM4')" value="4"/>
+<input type="button" onClick="sendCommand('SAM5')" value="5"/>
+<input type="button" onClick="sendCommand('SAM6')" value="6"/>
+<input type="button" onClick="sendCommand('SAM7')" value="7"/>
+<input type="button" onClick="sendCommand('SAM8')" value="8"/>
+<input type="button" onClick="sendCommand('SAM9')" value="9"/>
+<input type="button" onClick="sendCommand('SAM0')" value="0"/>
+<input type="button" onClick="sendCommand('SAMTxtMix')" value="TxtMix"/>
+<input type="button" onClick="sendCommand('SAMPreCh')" value="PreCh"/>
+<input type="button" onClick="sendCommand('SAMVolUp')" value="VolUp"/>
+<input type="button" onClick="sendCommand('SAMVolDown')" value="VolDown"/>
+<input type="button" onClick="sendCommand('SAMChUp')" value="ChUp"/>
+<input type="button" onClick="sendCommand('SAMChDown')" value="ChDown"/>
+<input type="button" onClick="sendCommand('SAMChList')" value="ChList"/>
+<input type="button" onClick="sendCommand('SAMMenu')" value="Menu"/>
+<input type="button" onClick="sendCommand('SAMMediaP')" value="MediaP"/>
+<input type="button" onClick="sendCommand('SAMGuide')" value="Guide"/>
+<input type="button" onClick="sendCommand('SAMInfo')" value="Info"/>
+<input type="button" onClick="sendCommand('SAMTools')" value="Tools"/>
+<input type="button" onClick="sendCommand('SAMUp')" value="&uarr;"/>
+<input type="button" onClick="sendCommand('SAMLeft')" value="&larr;"/>
+<input type="button" onClick="sendCommand('SAMRight')" value="&rarr;"/>
+<input type="button" onClick="sendCommand('SAMDown')" value="&darr;"/>
+<input type="button" onClick="sendCommand('SAMEnter')" value="Enter"/>
+<input type="button" onClick="sendCommand('SAMReturn')" value="Return"/>
+<input type="button" onClick="sendCommand('SAMExit')" value="Exit"/>
+<input type="button" onClick="sendCommand('SAMEManual')" value="Manual"/>
+<input type="button" onClick="sendCommand('SAMPicSize')" value="PicSize"/>
+<input type="button" onClick="sendCommand('SAMAdSubt')" value="AdSubt"/>
+<input type="button" onClick="sendCommand('SAMStop')" value="Stop"/>
+<input type="button" onClick="sendCommand('SAMPlay')" value="Play"/>
+<input type="button" onClick="sendCommand('SAMPause')" value="Pause"/>
+<input type="button" onClick="sendCommand('SAMRewind')" value="Rewind"/>
+<input type="button" onClick="sendCommand('SAMForward')" value="Forward"/>
+<input type="button" onClick="sendCommand('SAMA')" value="A"/>
+<input type="button" onClick="sendCommand('SAMB')" value="B"/>
+<input type="button" onClick="sendCommand('SAMC')" value="C"/>
+<input type="button" onClick="sendCommand('SAMD')" value="D"/>
+
+<h4>Custom Input</h4>
 0x<input type="text" id="addressBox" value="Device Address">
 0x<input type="text" id="commandBox" value="Command">
 <input type="button" onClick="">
