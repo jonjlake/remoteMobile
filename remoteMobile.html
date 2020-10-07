@@ -1,0 +1,134 @@
+<html>
+<head>
+<meta name="viewport" content="width=device_width, initial-scale=1.0">
+<script
+    src=" http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"
+    type="text/javascript" charset="utf-8">
+</script>
+<script>
+var accessToken="";
+var deviceID="";
+var deviceFunction="morse";
+var commandFunction="command";
+
+//var url="https://api.spark.io/v1/devices/"+ deviceID +"/" + sparkFunction;
+var devUrl="https://api.spark.io/v1/devices/"+ deviceID +"/" + deviceFunction;
+var comUrl="https://api.spark.io/v1/devices/"+ deviceID +"/" + commandFunction;
+
+/*function sendText()
+{
+    $.post(url, { params:document.getElementById("textbox").value, access_token:accessToken});
+}*/
+
+function sendCommand(command)
+{
+    $.post(comUrl, { params:command, access_token:accessToken});
+}
+
+
+</script>
+</head>
+<body>
+<h1>LG 42LK450 (0x04)</h1>
+
+<input type="button" onClick="sendCommand('LGTVPower')" value="Power"/>
+<input type="button" onClick="sendCommand('LGTVChUp')" value="Ch+"/>
+<input type="button" onClick="sendCommand('LGTVChDown')" value="Ch-"/>
+<input type="button" onClick="sendCommand('LGTVHdmi3')" value="Input: HDMI3"/>
+<input type="button" onClick="sendCommand('LGTVTv')" value="Input: TV"/>
+<input type="button" onClick="sendCommand('LGTV0')" value="0"/>
+<input type="button" onClick="sendCommand('LGTV1')" value="1"/>
+<input type="button" onClick="sendCommand('LGTV2')" value="2"/>
+<input type="button" onClick="sendCommand('LGTV3')" value="3"/>
+<input type="button" onClick="sendCommand('LGTV4')" value="4"/>
+<input type="button" onClick="sendCommand('LGTV5')" value="5"/>
+<input type="button" onClick="sendCommand('LGTV6')" value="6"/>
+<input type="button" onClick="sendCommand('LGTV7')" value="7"/>
+<input type="button" onClick="sendCommand('LGTV8')" value="8"/>
+<input type="button" onClick="sendCommand('LGTV9')" value="9"/>
+<input type="button" onClick="sendCommand('LGTVEnter')" value="Enter"/>
+<input type="button" onClick="sendCommand('LGTVLeft')" value="&larr;"/>
+<input type="button" onClick="sendCommand('LGTVUp')" value="&uarr;"/>
+<input type="button" onClick="sendCommand('LGTVRight')" value="&rarr;"/>
+<input type="button" onClick="sendCommand('LGTVDown')" value="&darr;"/>
+<input type="button" onClick="sendCommand('LGTVInput')" value="Input"/>
+<input type="button" onClick="sendCommand('LGTVHomeMenu')" value="Home/Menu"/>
+
+<input type="button" onClick="sendCommand('LGTVMuteDelete')" value="Mute/Delete"/>
+<input type="button" onClick="sendCommand('LGTVPortal')" value="Portal"/>
+<input type="button" onClick="sendCommand('LGTVFlshbkQview')" value="Flashbk/Q.View"/>
+<input type="button" onClick="sendCommand('LGTVFavMark')" value="Fav/Mark"/>
+<input type="button" onClick="sendCommand('LGTVBackReturn')" value="Back/Return"/>
+<input type="button" onClick="sendCommand('LGTVAvMode')" value="AV Mode"/>
+<input type="button" onClick="sendCommand('LGTVQMenu')" value="Q.Menu"/>
+<input type="button" onClick="sendCommand('LGTVDashList')" value="-(Dash)/List"/>
+<input type="button" onClick="sendCommand('LGTVAv1')" value="AV1"/>
+<input type="button" onClick="sendCommand('LGTVExit')" value="Exit"/>
+<input type="button" onClick="sendCommand('LGTVBlue')" value="Blue"/>
+<input type="button" onClick="sendCommand('LGTVYellow')" value="Yellow"/>
+<input type="button" onClick="sendCommand('LGTVGreen')" value="Green"/>
+<input type="button" onClick="sendCommand('LGTVRed')" value="Red"/>
+<input type="button" onClick="sendCommand('LGTVRatio43')" value="Ratio 4:3"/>
+<input type="button" onClick="sendCommand('LGTVRatio169')" value="Ratio 16:9"/>
+<input type="button" onClick="sendCommand('LGTVRatio')" value="Ratio"/>
+<input type="button" onClick="sendCommand('LGTVSimplink')" value="Simplink"/>
+<input type="button" onClick="sendCommand('LGTVFfwd')" value="FFWD"/>
+<input type="button" onClick="sendCommand('LGTVRew')" value="REW"/>
+<input type="button" onClick="sendCommand('LGTVEnSav')" value="Energy Saving"/>
+<input type="button" onClick="sendCommand('LGTVInfo')" value="Info"/>
+<input type="button" onClick="sendCommand('LGTVGuide')" value="Guide"/>
+<input type="button" onClick="sendCommand('LGTVRatioZoom')" value="Ratio Zoom"/>
+<input type="button" onClick="sendCommand('LGTVPlay')" value="PLAY"/>
+<input type="button" onClick="sendCommand('LGTVStop')" value="STOP"/>
+<input type="button" onClick="sendCommand('LGTVPauseFreeze')" value="Pause/Freeze"/>
+<input type="button" onClick="sendCommand('LGTVComponent1')" value="Component 1"/>
+<input type="button" onClick="sendCommand('LGTVPowerOn')" value="Power On"/>
+<input type="button" onClick="sendCommand('LGTVPowerOff')" value="Power Off"/>
+<input type="button" onClick="sendCommand('LGTVHdmi2')" value="HDMI2"/>
+<input type="button" onClick="sendCommand('LGTVHdmi1')" value="HDMI1"/>
+<input type="button" onClick="sendCommand('LGTVAv2')" value="AV2"/>
+<input type="button" onClick="sendCommand('LGTVComponent2')" value="Component 2"/>
+<input type="button" onClick="sendCommand('LGTVRgbpc')" value="RGB-PC"/>
+<input type="button" onClick="sendCommand('LGTVTvinput')" value="TV Input"/>
+<input type="button" onClick="sendCommand('LGTVHdmi4')" value="HDMI4"/>
+<input type="button" onClick="sendCommand('LGTV3d')" value="3D"/>
+<input type="button" onClick="sendCommand('LGTVVolUp')" value="Vol+"/>
+<input type="button" onClick="sendCommand('LGTVVolDown')" value="Vol-"/>
+
+<h2>Yamaha Natural Sound AV Receiver HTR-5450 (0x7A)</h2>
+<input type="button" onClick="sendCommand('YAMAmpPow')" value="Power"/>
+<input type="button" onClick="sendCommand('YAMAmpStby')" value="Standby"/>
+<input type="button" onClick="sendCommand('YAMAmpVolUp')" value="Vol+"/>
+<input type="button" onClick="sendCommand('YAMAmpVolDown')" value="Vol-"/>
+<input type="button" onClick="sendCommand('YAMDTv')" value="D-TV/CBL (TV)"/>
+<input type="button" onClick="sendCommand('YAMCd')" value="CD (Record Player)"/>
+<input type="button" onClick="sendCommand('YAMVAux')" value="V-AUX (Auxiliary Cable)"/>
+<input type="button" onClick="sendCommand('YAMTuner')" value="Tuner (Radio)"/>
+
+<input type="button" onClick="sendCommand('YAMVcr')" value="VCR"/>
+<input type="button" onClick="sendCommand('YAMPresetPlus')" value="Preset+"/>
+<input type="button" onClick="sendCommand('YAMPresetMinus')" value="Preset-"/>
+<input type="button" onClick="sendCommand('YAMAbcde')" value="A/B/C/D/E"/>
+<input type="button" onClick="sendCommand('YAMVcr2')" value="VCR2"/>
+<input type="button" onClick="sendCommand('YAMPhono')" value="Phono"/>
+<input type="button" onClick="sendCommand('YAMDvdLd')" value="DVD/LD"/>
+<input type="button" onClick="sendCommand('YAMTapeMd')" value="TAPE/MD"/>
+<input type="button" onClick="sendCommand('YAMAmpMute')" value="Mute"/>
+<input type="button" onClick="sendCommand('YAMLeft')" value="&larr;"/>
+<input type="button" onClick="sendCommand('YAMRight')" value="&rarr;"/>
+<input type="button" onClick="sendCommand('YAMUp')" value="&uarr;"/>
+<input type="button" onClick="sendCommand('YAMDown')" value="&darr;"/>
+<input type="button" onClick="sendCommand('YAMAmpSleep')" value="Sleep"/>
+<input type="button" onClick="sendCommand('YAMTest')" value="Test"/>
+<input type="button" onClick="sendCommand('YAMTimeLevel')" value="Time/Level"/>
+<input type="button" onClick="sendCommand('YAMExtDec')" value="Ext. Dec."/>
+<input type="button" onClick="sendCommand('YAMSetMenu')" value="Set Menu"/>
+<input type="button" onClick="sendCommand('YAMCblSat')" value="CBL/SAT"/>
+<input type="button" onClick="sendCommand('YAMOnScreen')" value="On Screen"/>
+
+<h3>Custom Input</h3>
+0x<input type="text" id="addressBox" value="Device Address">
+0x<input type="text" id="commandBox" value="Command">
+<input type="button" onClick="">
+</body>
+</html>
